@@ -1,5 +1,5 @@
 {
-  "name": "localtunnel",
+  "name": "tunnel-client",
   "description": "Expose localhost to the world",
   "version": "2.0.2",
   "license": "MIT",
@@ -15,7 +15,7 @@
   ],
   "main": "./localtunnel.js",
   "bin": {
-    "lt": "bin/lt.js"
+    "st": "bin/lt.js"
   },
   "scripts": {
     "test": "mocha --reporter list --timeout 60000 -- *.spec.js"
