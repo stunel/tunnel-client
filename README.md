@@ -26,19 +26,19 @@ yarn add localtunnel
 
 ## CLI usage
 
-When localtunnel is installed globally, just use the `lt` command to start the tunnel.
+When localtunnel is installed globally, just use the `st` command to start the tunnel.
 
 ```
-lt --port 8000
+st --port 8000
 ```
 
 Thats it! It will connect to the tunnel server, setup the tunnel, and tell you what url to use for your testing. This url will remain active for the duration of your session; so feel free to share it with others for happy fun time!
 
-You can restart your local server all you want, `lt` is smart enough to detect this and reconnect once it is back.
+You can restart your local server all you want, `st` is smart enough to detect this and reconnect once it is back.
 
 ### Arguments
 
-Below are some common arguments. See `lt --help` for additional arguments
+Below are some common arguments. See `st --help` for additional arguments
 
 - `--subdomain` request a named subdomain on the localtunnel server (default is random characters)
 - `--local-host` proxy to a hostname other than localhost
@@ -77,7 +77,7 @@ const localtunnel = require('localtunnel');
 
 - `port` (number) [required] The local port number to expose through localtunnel.
 - `subdomain` (string) Request a specific subdomain on the proxy server. **Note** You may not actually receive this name depending on availability.
-- `host` (string) URL for the upstream proxy server. Defaults to `https://localtunnel.me`.
+- `host` (string) URL for the upstream proxy server. Defaults to `https://stunel.io`.
 - `local_host` (string) Proxy to this hostname instead of `localhost`. This will also cause the `Host` header to be re-written to this value in proxied requests.
 - `local_https` (boolean) Enable tunneling to local HTTPS server.
 - `local_cert` (string) Path to certificate PEM file for local HTTPS server.
