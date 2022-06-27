@@ -21,7 +21,7 @@ npm install -g stunel-client
 ### As a dependency in your project
 
 ```
-yarn add localtunnel
+yarn add stunel-client
 ```
 
 ## CLI usage
@@ -46,7 +46,7 @@ Below are some common arguments. See `st --help` for additional arguments
 You may also specify arguments via env variables. E.x.
 
 ```
-PORT=3000 lt
+PORT=3000 st
 ```
 
 ## API
