@@ -15,7 +15,7 @@ npx localtunnel --port 8000
 ### Globally
 
 ```
-npm install -g localtunnel
+npm install -g stunel-client
 ```
 
 ### As a dependency in your project
