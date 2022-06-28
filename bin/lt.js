@@ -23,6 +23,14 @@ const { argv } = yargs
     alias: 'subdomain',
     describe: 'Request this subdomain',
   })
+  .option('pass', {
+    alias: 'password',
+    describe: 'Request the subdomain with password',
+  })
+  .option('sv', {
+    alias: 'save',
+    describe: 'Save the requested password',
+  })
   .option('l', {
     alias: 'local-host',
     describe: 'Tunnel traffic to this host instead of localhost, override Host header to this host',
@@ -67,6 +75,8 @@ if (typeof argv.port !== 'number') {
     port: argv.port,
     host: argv.host,
     subdomain: argv.subdomain,
+    password: argv.password,
+    save: argv.save,
     local_host: argv.localHost,
     local_https: argv.localHttps,
     local_cert: argv.localCert,
