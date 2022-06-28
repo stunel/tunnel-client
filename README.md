@@ -24,17 +24,6 @@ npm install -g stunel-client
 yarn add stunel-client
 ```
 
-## Password protected
-
-You can now request a subdomain with a user defined `password` or the system will generate a password for you and save it in  `/lib/pass.text`, if the `save` option is specified, the user defined password will be saved and used for subsequent subdomain request.
-This passworded request will solve the problem of `server refusing to connect your client` which normally occurs when your client disconnects from the server without closing the tunnel. If you request the subdomain with the same password, the server will kill the previous tunnel and provision a new one for you.
-
-You need to run the `st` command as an administrator or with sudo the first time for it to save your password
-
-```
---pass <your password>  --save
-```
-
 ## CLI usage
 
 When localtunnel is installed globally, just use the `st` command to start the tunnel.
@@ -58,6 +47,17 @@ You may also specify arguments via env variables. E.x.
 
 ```
 PORT=3000 st
+```
+
+## Password protected
+
+You can now request a subdomain with a user defined `password` or the system will generate a password for you and save it in  `/lib/pass.text`, if the `save` option is specified, the user defined password will be saved and used for subsequent subdomain request.
+This passworded request will solve the problem of `server refusing to connect your client` which normally occurs when your client disconnects from the server without closing the tunnel. If you request the subdomain with the same password, the server will kill the previous tunnel and provision a new one for you.
+
+You need to run the `st` command as an administrator or with sudo the first time for it to save your password
+
+```
+sudo st -p <your port> -s <your subdomain> --pass <your password>  --save
 ```
 
 ## API
