@@ -31,6 +31,8 @@ Below are some common arguments. See `st --help` for additional arguments
 - `--subdomain` request a named subdomain on the localtunnel server (default is random characters)
 - `--pass` request a subdomain through a password
 - `--save` save the requested password for futher usage
+- `--open` open the url in browser after provisioning
+- `--local-host` specify the actual host you want to tunnel traffic, helpful for those that wish to tunnel traffic to an app in a particular port
 
 ## Password protected
 

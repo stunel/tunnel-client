@@ -1,3 +1,6 @@
+# 2.0.4 (2022-06-29)
+- added password functionality
+
 # 2.0.2 (2021-09-18)
 
 - Upgrade dependencies

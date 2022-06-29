@@ -1,11 +1,11 @@
 {
   "name": "stunel-client",
   "description": "Expose localhost to the world",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/localtunnel/localtunnel.git"
+    "url": "git://github.com/stunel/tunnel-client.git"
   },
   "author": "Roman Shtylman <shtylman@gmail.com>",
   "contributors": [
