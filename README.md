@@ -17,7 +17,7 @@ npm install -g stunel-client
 When localtunnel is installed globally, just use the `st` command to start the tunnel.
 
 ```
-st --port 8000
+st --port <your port> -s <your subdomain>
 ```
 
 Thats it! It will connect to the tunnel server, setup the tunnel, and tell you what url to use for your testing. This url will remain active for the duration of your session; so feel free to share it with others for happy fun time!
@@ -32,7 +32,6 @@ Below are some common arguments. See `st --help` for additional arguments
 - `--pass` request a subdomain through a password
 - `--save` save the requested password for futher usage
 - `--open` open the url in browser after provisioning
-- `--local-host` specify the actual host you want to tunnel traffic, helpful for those that wish to tunnel traffic to an app in a particular port
 
 ## Password protected
 
