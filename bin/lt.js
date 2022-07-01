@@ -55,6 +55,7 @@ if (typeof argv.subdomain !== 'string') {
     subdomain: argv.subdomain,
     password: argv.password,
     save: argv.save,
+    open: argv.open,
   }).catch(err => {
     console.log(err.message);
     process.exit(1);
