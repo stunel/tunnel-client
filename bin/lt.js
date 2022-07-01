@@ -34,18 +34,17 @@ const { argv } = yargs
     describe: 'Print basic request info',
   })
   .require('port')
+  .require('subdomain')
   .boolean('print-requests')
   .help('help', 'Show this help and exit')
   .version(version);
 
 if (typeof argv.port !== 'number') {
-  yargs.showHelp();
   console.error('\nInvalid argument: `port` must be a number');
   process.exit(1);
 }
 
 if (typeof argv.subdomain !== 'string') {
-  yargs.showHelp();
   console.error('\nInvalid argument: `subdomain` must be a string');
   process.exit(1);
 }
@@ -57,14 +56,18 @@ if (typeof argv.subdomain !== 'string') {
     password: argv.password,
     save: argv.save,
   }).catch(err => {
-    throw err;
+    console.log(err.message);
+    process.exit(1);
   });
 
   tunnel.on('error', err => {
-    throw err;
+    console.log(err.message);
+    process.exit(1);
   });
 
-  console.log('your url is: %s', tunnel.url);
+  if(tunnel.url){
+    console.log('your url is: %s', tunnel.url);
+  }
 
   /**
    * `cachedUrl` is set when using a proxy server that support resource caching.
